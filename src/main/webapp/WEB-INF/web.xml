@@ -1,0 +1,93 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" 
+         version="5.0">
+
+ 
+  <servlet>
+    <servlet-name>BookRoomServlet</servlet-name>
+    <servlet-class>com.controller.BookRoomServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>BookRoomServlet</servlet-name>
+    <url-pattern>/BookRoomServlet</url-pattern>
+</servlet-mapping>
+
+    
+        <servlet>
+    <servlet-name>DeleteRoomServlet</servlet-name>
+    <servlet-class>com.controller.DeleteRoomServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteRoomServlet</servlet-name>
+    <url-pattern>/DeleteRoomServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>UpdateRoomServlet</servlet-name>
+    <servlet-class>com.controller.UpdateRoomServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UpdateRoomServlet</servlet-name>
+    <url-pattern>/UpdateRoomServlet</url-pattern>
+</servlet-mapping>
+
+    
+  <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>AddBookingServlet</servlet-name>
+        <servlet-class>com.controller.AddBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBookingServlet</servlet-name>
+        <url-pattern>/AddBookingServlet</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet>
+        <servlet-name>EditBookingServlet</servlet-name>
+        <servlet-class>com.controller.EditBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditBookingServlet</servlet-name>
+        <url-pattern>/EditBookingServlet</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <servlet-class>com.controller.DeleteBookingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <url-pattern>/DeleteBookingServlet</url-pattern>
+    </servlet-mapping>
+     <servlet>
+        <servlet-name>RoomAvailabilityServlet</servlet-name>
+        <servlet-class>com.controller.RoomAvailabilityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomAvailabilityServlet</servlet-name>
+        <url-pattern>/RoomAvailabilityServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- AddRoomServlet -->
+    <servlet>
+        <servlet-name>AddRoomServlet</servlet-name>
+        <servlet-class>com.controller.AddRoomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddRoomServlet</servlet-name>
+        <url-pattern>/AddRoomServlet</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
