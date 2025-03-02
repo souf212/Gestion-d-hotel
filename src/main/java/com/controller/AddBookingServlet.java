@@ -10,18 +10,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import com.util.DatabaseConnection;
-
 public class AddBookingServlet extends HttpServlet {
-    
 	private static final long serialVersionUID = 1L;
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String arrival = request.getParameter("arrival");
         String departure = request.getParameter("departure");
         String fullName = request.getParameter("fullName");
         String chambreName = request.getParameter("chambreName");
-
         try (Connection connection = DatabaseConnection.getConnection()) {
             String query = "INSERT INTO bookings (arrival_date, departure_date, full_name, chambre_name) VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -33,7 +29,6 @@ public class AddBookingServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         response.sendRedirect("listBookings.jsp");
     }
 }
