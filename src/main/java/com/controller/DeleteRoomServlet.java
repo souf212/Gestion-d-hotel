@@ -27,7 +27,6 @@ public class DeleteRoomServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        // Redirect back to the room availability page
         response.sendRedirect("roomAvailability.jsp");
     }
 }

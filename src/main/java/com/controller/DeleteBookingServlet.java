@@ -15,7 +15,6 @@ public class DeleteBookingServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Retrieve the booking ID from the URL
         String id = request.getParameter("id");
 
         try (Connection connection = DatabaseConnection.getConnection()) {
@@ -31,7 +30,6 @@ public class DeleteBookingServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        // Redirect back to the booking list
         response.sendRedirect("listBookings.jsp");
     }
 }

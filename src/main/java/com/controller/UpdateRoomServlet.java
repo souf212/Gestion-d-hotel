@@ -17,13 +17,11 @@ public class UpdateRoomServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Retrieve form data
         int roomId = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String status = request.getParameter("status");
         String description = request.getParameter("description");
 
-        // SQL query to update room details
         String updateQuery = "UPDATE rooms SET name = ?, status = ?, description = ? WHERE id = ?";
 
         try (Connection connection = DatabaseConnection.getConnection();
