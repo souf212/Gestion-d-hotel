@@ -174,8 +174,7 @@
                   <div class="titlepage">
                      <h2>About Us</h2>
                      <p>Nestled in the heart of sophistication, Celestia Luxe is a sanctuary of opulence and refinement. Designed to cater to every whim, our hotel offers world-class accommodations, exquisite dining experiences, and bespoke services tailored to create unforgettable moments. From the serene ambiance of our spa to the grandeur of our suites, every detail has been meticulously crafted to provide an experience that is as indulgent as it is timeless. Discover the art of hospitality redefined at Elysian Grand, your ultimate escape to a world of luxury. </p>
-          
-                  </div>
+           </div>
                </div>
                <div class="col-md-7">
                   <div class="about_img">
@@ -185,8 +184,6 @@
             </div>
          </div>
       </div>
-      <!-- end about -->
-      <!-- our_room -->
       <div  class="our_room">
       
          <div class="container">
@@ -267,12 +264,7 @@
             </div>
          </div>
       </div>
-     
-      <!-- end our_room -->
-      <!-- gallery -->
-    
-      <!-- end gallery -->
-      <!-- blog -->
+
       <div  class="blog">
          <div class="container">
             <div class="row">
@@ -320,11 +312,6 @@
             </div>
          </div>
       </div>
-      <!-- end blog -->
-      <!--  contact -->
-      
-      <!-- end contact -->
-      <!--  footer -->
       <footer>
          <div class="footer">
             <div class="container">
