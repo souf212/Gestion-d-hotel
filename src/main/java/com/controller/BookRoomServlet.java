@@ -3,22 +3,18 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import com.util.DatabaseConnection;
-
 import jakarta.servlet.ServletException; 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 
 public class BookRoomServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Retrieve form parameters
-        String arrival = request.getParameter("arrival");
+         String arrival = request.getParameter("arrival");
         String departure = request.getParameter("departure");
         String fullName = request.getParameter("fullName");
         String chambreName = request.getParameter("chambreName");
