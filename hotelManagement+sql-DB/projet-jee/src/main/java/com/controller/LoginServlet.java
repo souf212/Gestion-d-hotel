@@ -19,29 +19,23 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Retrieve form parameters
-        String username = request.getParameter("username");
+         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // SQL query to validate credentials
-        String selectQuery = "SELECT * FROM admin WHERE username = ? AND password = ?";
+         String selectQuery = "SELECT * FROM admin WHERE username = ? AND password = ?";
 
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
 
-            // Set parameters for the prepared statement
-            preparedStatement.setString(1, username);
+             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
 
-            // Execute query
-            ResultSet resultSet = preparedStatement.executeQuery();
+             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                // User exists - Redirect to admin dashboard
-                response.sendRedirect("admin.jsp");
+                 response.sendRedirect("admin.jsp");
             } else {
-                // Invalid credentials - Redirect to login page with error
-                response.sendRedirect("login.jsp?error=invalid");
+                 response.sendRedirect("login.jsp?error=invalid");
             }
         } catch (SQLException e) {
             e.printStackTrace();

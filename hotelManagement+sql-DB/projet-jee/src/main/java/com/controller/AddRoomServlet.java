@@ -33,7 +33,6 @@ public class AddRoomServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        // Redirect back to the listing page
-        response.sendRedirect("RoomAvailabilityServlet");
+         response.sendRedirect("RoomAvailabilityServlet");
     }
 }

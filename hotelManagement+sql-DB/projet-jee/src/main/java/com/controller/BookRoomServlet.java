@@ -18,33 +18,27 @@ public class BookRoomServlet extends HttpServlet {
  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Retrieve form parameters
-        String arrival = request.getParameter("arrival");
+         String arrival = request.getParameter("arrival");
         String departure = request.getParameter("departure");
         String fullName = request.getParameter("fullName");
         String chambreName = request.getParameter("chambreName");
 
-        // Database insert query
-        String insertQuery = "INSERT INTO bookings (arrival_date, departure_date, full_name, chambre_name) VALUES (?, ?, ?, ?)";
+         String insertQuery = "INSERT INTO bookings (arrival_date, departure_date, full_name, chambre_name) VALUES (?, ?, ?, ?)";
 
         try (Connection connection = DatabaseConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
 
-            // Set parameters
-            preparedStatement.setString(1, arrival);
+             preparedStatement.setString(1, arrival);
             preparedStatement.setString(2, departure);
             preparedStatement.setString(3, fullName);
             preparedStatement.setString(4, chambreName);
 
-            // Execute update
-            int rowsInserted = preparedStatement.executeUpdate();
+             int rowsInserted = preparedStatement.executeUpdate();
 
             if (rowsInserted > 0) {
-                // Redirect to index.jsp after successful booking
-                response.sendRedirect("index.jsp");
+                 response.sendRedirect("index.jsp");
             } else {
-                // Redirect to error.jsp on failure
-                response.sendRedirect("error.jsp");
+                 response.sendRedirect("error.jsp");
             }
         } catch (SQLException e) {
             e.printStackTrace();
